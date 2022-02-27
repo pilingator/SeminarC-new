@@ -8,5 +8,6 @@ Console.WriteLine(A);
 Console.WriteLine(B);
 if (A>B) Console.WriteLine($"Максимальное число: {A}");
 else 
-Console.WriteLine($"Максимальное число: {B}");
-
+if (A<B) Console.WriteLine($"Максимальное число: {B}");
+else 
+Console.WriteLine($"Числа {A} и {B} равны");
