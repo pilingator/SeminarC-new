@@ -2,10 +2,11 @@
 //является ли оно палиндромом.
 
 Console.Write("Введите пятизначное число => ");
-string inputNumber = Console.ReadLine();
-int Length = inputNumber.Length;
-
-if (inputNumber[0] == inputNumber[4] || inputNumber[1] == inputNumber[3]) 
-Console.WriteLine($"Число {inputNumber} является палиндромом");
+string N = Console.ReadLine();
+int Length = N.Length;
+if (Length > 5 || Length < 4) Console.WriteLine($"Вы ввели не пятизначное число");
 else 
-Console.WriteLine($"Число {inputNumber} не является палиндромом");
+if (N[0] == N[4] || N[1] == N[3]) 
+Console.WriteLine($"Число {N} является палиндромом");
+else 
+Console.WriteLine($"Число {N} не является палиндромом");
