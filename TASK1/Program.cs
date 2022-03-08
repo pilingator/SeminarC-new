@@ -1,4 +1,4 @@
-﻿//Сравнение чисел 
+﻿//Сравнение квадрата числа а с числм b
 Console.Write("Введите число А=> ");
 string inputA = Console.ReadLine();
 int numberA = int.Parse(inputA);
