@@ -1,32 +1,11 @@
-﻿// Для введенного числа N находит произведение чисел т 1 д N
+﻿// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N
 
-int Prompt(string message)
+Console.Write("Введите число => ");
+string inputNumber = Console.ReadLine();
+int N = int.Parse(inputNumber);
+int proisv = 1;
+for(int i = 1; i <= N; i++)
 {
-    Console.Write(message);
-    string strValue = Console.ReadLine();
-    int Value = int.Parse(strValue);
-    return Value;
+    proisv = proisv * i;
 }
-int Proisv(int Value)
-{
-    int fact = 1;
-    if (Value < 1)
-    {
-        for (int i = 1; i >= Value; i--)
-        {
-            fact = fact * i;
-        } 
-    }
-        else if (Value > 1)
-        {
-            for (int i = 1; i <= Value; i++)
-            {
-                fact = fact * i;
-            }
-        }
-return fact;
-}
-    
-    int N = Prompt("Введите число => ");
-    int F = Proisv(N);
-    Console.WriteLine($"Произведение числе от 1 до {N} равно {F}");
+Console.WriteLine($"Произведением чисел от 1 до {inputNumber} является число {proisv}");
