@@ -1,24 +1,12 @@
-﻿// Напишите программу, которая принимает на вход число (А)
-// и выдает сумму числео от 1 до А
+﻿// Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
 
-int number = Prompt ("Введите число => ");
-Console.WriteLine($"Сумма чисел от 1 до {number} равна {NumberSumm(number)}");
-
-
-int NumberSumm(int digit)
+Console.Write("Введите число => ");
+string inputNumber = Console.ReadLine();
+int N = int.Parse(inputNumber);
+int i = 1;
+while(N / 10 != 0)
 {
-   int sum = 0;
-for (int i = 1; i <= digit; i++)
-{
-    sum += i;
-} 
-return sum;
+    N = N / 10;
+    i++;
 }
-
-int Prompt(string message)
-{
-    Console.Write(message);
-    string strValue = Console.ReadLine();
-    int Value = int.Parse(strValue);
-    return Value;
-}
+Console.WriteLine($"Количество цифр в числе {inputNumber} равно {i} ");
