@@ -1,4 +1,5 @@
 ﻿// Для введенного числа N находит произведение чисел т 1 д N
+
 int Prompt(string message)
 {
     Console.Write(message);
