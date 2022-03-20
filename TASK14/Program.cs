@@ -1,23 +1,11 @@
-﻿// Программа принимает на вход А и выдает сумму чисел от 1 до А
+﻿// Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
 
-int number = Prompt ("Введите число => ");
-Console.WriteLine($"Сумма чисел от 1 до {number} равна {NumberSumm(number)}");
-
-
-int NumberSumm(int digit)
+Console.Write("Введите число => ");
+string inputNumber = Console.ReadLine();
+int N = int.Parse(inputNumber);
+int sum = 0;
+for(int A = 0; A <= N; A++)
 {
-   int sum = 0;
-for (int i = 1; i <= digit; i++)
-{
-    sum += i;
-} 
-return sum;
+    sum = sum + A;
 }
-
-int Prompt(string message)
-{
-    Console.Write(message);
-    string strValue = Console.ReadLine();
-    int Value = int.Parse(strValue);
-    return Value;
-}
+Console.WriteLine(sum);
