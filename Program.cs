@@ -14,4 +14,5 @@ for(int i = 1; i <= B; i++)
 {
     proizv = proizv*A;
 }
+
 Console.WriteLine($"Число {A} в степени {B} равно {proizv}");
